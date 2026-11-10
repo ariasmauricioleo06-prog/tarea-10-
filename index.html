@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: grid;
+            width: 800px;
+            height: 500px;
+            gap: 10px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas: 
+                "uno dos dos tres"
+                "uno cinco siete cuatro"
+                "uno ocho seis cuatro";
+            margin: 20px auto;
+        }
+
+        .caja {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Asignación de áreas */
+        .uno   { grid-area: uno; background-color: #008000; }
+        .dos   { grid-area: dos; background-color: #008000; }
+        .tres  { grid-area: tres; background-color: #ff0000; }
+        .cuatro{ grid-area: cuatro; background-color: #008000; }
+        .cinco { grid-area: cinco; background-color: #ffa500; }
+        .seis  { grid-area: seis; background-color: #ffa500; }
+        .siete { grid-area: siete; background-color: #ff0000; }
+        .ocho  { grid-area: ocho; background-color: #ff0000; }
+    </style>
+</head>
+<body>
+    <h1>Grid 1</h1>
+
+    <div id="container">
+        <div class="caja uno">UNO</div>
+        <div class="caja dos">DOS</div>
+        <div class="caja tres">TRES</div>
+        <div class="caja cuatro">CUATRO</div>
+        <div class="caja cinco">CINCO</div>
+        <div class="caja seis">SEIS</div>
+        <div class="caja siete">SIETE</div>
+        <div class="caja ocho">OCHO</div>
+    </div>
+</body>
+</html>
